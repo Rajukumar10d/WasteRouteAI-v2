@@ -1,0 +1,4 @@
+truck_id,capacity_kg,speed_kmph,shift_hours
+TRUCK_1,1000,30,8
+TRUCK_2,1200,28,8
+TRUCK_3,1500,25,10

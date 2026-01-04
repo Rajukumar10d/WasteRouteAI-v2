@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Waste Routing – GHMC</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= GHMC HEADER ================= -->
+<header class="ghmc-topbar">
+  <div class="ghmc-container">
+
+    <div class="ghmc-left">
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/GHMC_logo.png" alt="GHMC Logo">
+    </div>
+
+    <div class="ghmc-center">
+      <h1>ग्रेटर हैदराबाद नगर निगम (GHMC)</h1>
+      <h2>Smart Waste Routing & Collection System</h2>
+      <p>AI-Powered | Blockchain Enabled | Smart City Initiative</p>
+    </div>
+
+    <div class="ghmc-right">
+      <span>Government of Telangana</span>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= DASHBOARD ================= -->
+<section class="dashboard-section">
+  <div class="dashboard-wrapper">
+    <div class="dash-card">🗺️ <span>Live Map View</span></div>
+    <div class="dash-card">➕ <span>Add Trucks / GVPs / SCTPs</span></div>
+    <div class="dash-card">🚛 <span>Truck Control Center</span></div>
+    <div class="dash-card">📊 <span>Live Monitoring</span></div>
+    <div class="dash-card">🤖 <span>AI Prediction Engine</span></div>
+  </div>
+
+  <div class="dashboard-help">
+    <a href="https://wa.me/9939429446" target="_blank" class="helpdesk-btn">
+      💬 नागरिक सहायता (WhatsApp Helpdesk)
+    </a>
+  </div>
+</section>
+
+<!-- ================= MAP SECTION ================= -->
+
+ 
+<section class="map-section">
+
+  <div class="map-control-bar">
+    <button class="optimize-btn" onclick="runOptimization()">
+      🚛 Run Optimization
+    </button>
+  </div>
+
+  <!-- Flex container: map + live monitoring -->
+  <div class="map-live-container">
+    <!-- Map 50% -->
+    <div id="map"></div>
+
+    <!-- Live Monitoring 50% -->
+    <div class="live-monitoring">
+      <h3>Live Monitoring</h3>
+      <div id="monitor-trucks">
+        <!-- Truck stats cards will be dynamically injected here -->
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+  
+
+
+<!-- ================= TRUCK CONTROL PANEL ================= -->
+<section class="truck-control-section">
+  <h3>🚛 Truck Control Panel</h3>
+  <table class="status-table" id="truckControlTable">
+    <thead>
+      <tr>
+        <th>Truck</th>
+        <th>Speed</th>
+        <th>Traffic</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- JS will populate truck rows here -->
+    </tbody>
+  </table>
+</section>
+
+<!-- ================= STATUS TABLES ================= -->
+<section class="status-sections">
+
+  <div class="status-card">
+    <h3 class="status-title">🚚 Truck Details</h3>
+    <table class="status-table">
+      <thead>
+        <tr>
+          <th>Truck</th>
+          <th>Status</th>
+          <th>Waste Collected (kg)</th>
+        </tr>
+      </thead>
+      <tbody id="truckTable"></tbody>
+    </table>
+  </div>
+
+  <div class="status-card">
+    <h3 class="status-title">📍 GVP Status</h3>
+    <table class="status-table">
+      <thead>
+        <tr>
+          <th>GVP</th>
+          <th>Waste (kg)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="gvpTable"></tbody>
+    </table>
+  </div>
+
+  <div class="status-card">
+    <h3 class="status-title">🏢 SCTP Points</h3>
+    <table class="status-table">
+      <thead>
+        <tr>
+          <th>SCTP</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody id="sctpTable"></tbody>
+    </table>
+  </div>
+
+</section>
+
+<!-- ================= AI SECTION ================= -->
+<section class="ai-section">
+  <h2 class="ai-title">🧠 Tomorrow’s AI Waste Collection Plan</h2>
+  <div class="table-card">
+    <table class="ai-table">
+      <thead>
+        <tr>
+          <th>GVP</th>
+          <th>Current Waste</th>
+          <th>Predicted Waste</th>
+          <th>Risk</th>
+        </tr>
+      </thead>
+      <tbody id="predictionTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="support-section">
+  <h3>📞 Support & Citizen Help</h3>
+  <p>Email: <strong>support@ghmc.gov.in</strong></p>
+  <p>Helpline: <strong>+91 40 2111 1111</strong></p>
+  <span>© GHMC | Smart City Mission | Government of Telangana</span>
+</footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Main App JS -->
+<script src="app.js"></script>
+
+</body>
+</html>

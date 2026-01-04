@@ -1,0 +1,13 @@
+{
+  "sctps": [
+    { "id": "SCTP-1", "lat": 17.4139, "lng": 78.4797 },
+    { "id": "SCTP-2", "lat": 17.4300, "lng": 78.5300 },
+    { "id": "SCTP-3", "lat": 17.3600, "lng": 78.4400 }
+  ],
+  "trucks": [
+    { "id": "Truck-1", "capacity": 2500, "fuel_rate": 0.8 },
+    { "id": "Truck-2", "capacity": 3000, "fuel_rate": 0.9 },
+    { "id": "Truck-3", "capacity": 2800, "fuel_rate": 0.85 }
+    
+  ]
+}
